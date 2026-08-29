@@ -1,0 +1,50 @@
+#include <stdio.h>
+
+int main(){
+    float primeiro;
+    float segundo;
+    float terceiro;
+    int peso1;
+    int peso2;
+    int peso3;
+    float media;
+    
+    printf("Digite o primeiro numero: \n");
+    scanf("%f", &primeiro);
+    
+    printf("Digite o primeiro peso: \n");
+    scanf("%d", &peso1);
+    
+    while (peso1 < 0){
+        printf("Digite um peso valido: \n");
+        scanf("%d", &peso1);
+    }
+    
+    printf("Digite o segundo o numero: \n");
+    scanf("%f", &segundo);
+    
+    printf("Digite o segundo peso: \n");
+    scanf("%d", &peso2);
+    
+    while (peso2 < 0){
+        printf("Digite um peso valido: \n");
+        scanf("%d", &peso2);
+    }
+    
+    printf("Digite o terceiro o numero: \n");
+    scanf("%f", &terceiro);
+    
+    printf("Digite o terceiro peso: \n");
+    scanf("%d", &peso3);
+    
+    while (peso3 < 0){
+        printf("Digite um peso valido: \n");
+        scanf("%d", &peso3);
+    }
+    
+    media = (primeiro * peso1 + segundo * peso2 + terceiro * peso3) / (peso1 + peso2 + peso3);
+
+    printf("A media dos seus numeros sao: %.2f", media);
+    
+    return 0;
+}
