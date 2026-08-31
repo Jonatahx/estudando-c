@@ -1,9 +1,12 @@
 #include <stdio.h>
+#include <locale.h>
 
 int main(){
+	setlocale(LC_ALL, "Portuguese");
+	
     float deposito, juros, porcentagem_juros, rendimento, rendimento_total;
     
-    printf("Digite o valor do depÃ³sito: \n");
+    printf("Digite o valor do depósito: \n");
     scanf("%f", &deposito);
     
     printf("Digite o valor da taxa de juros \n");

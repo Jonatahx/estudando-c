@@ -1,17 +1,20 @@
 #include <stdio.h>
+#include <locale.h>
 
 int main(){
+	setlocale(LC_ALL, "Portuguese");
+	
     float base, altura, area;
     
-    printf("Digite a base do tri√¢ngulo: \n");
+    printf("Digite a base do tr‚ngulo: \n");
     scanf("%f", &base);
     
-    printf("Digite a altura do tri√¢ngulo: \n");
+    printf("Digite a altura do tri‚ngulo: \n");
     scanf("%f", &altura);
     
     area = (base * altura) / 2;
     
-    printf("A √°rea do seu tri√¢nulo √©: %.1f", area);
+    printf("A ·rea do seu tri‚ngulo È: %.1f", area);
     
     return 0;
 }

@@ -1,16 +1,19 @@
 #include <stdio.h>
+#include <locale.h>
 
 int main(){
+	setlocale(LC_ALL, "Portuguese");
+	
     int valor;
     float fabrica, lucro, impostos, porcentagem_lucro, porcentagem_impostos, preco_final;
     
-    printf("Digite o preÃ§o de fÃ¡brica: \n");
+    printf("Digite o preço de fábrica: \n");
     
     while (1){
         valor = scanf("%f", &fabrica);
         
         if (valor != 1){
-            printf("Erro! Digite um nÃºmero.\n");
+            printf("Erro! Digite um número.\n");
             
             while (getchar() != '\n');
             
@@ -26,7 +29,7 @@ int main(){
         valor = scanf("%f", &lucro);
         
         if (valor != 1){
-            printf("Erro! Digite um nÃºmero.\n");
+            printf("Erro! Digite um número.\n");
             
             while (getchar() != '\n');
             
@@ -42,7 +45,7 @@ int main(){
         valor = scanf("%f", &impostos);
         
         if (valor != 1){
-            printf("Erro! Digite um nÃºmero.\n");
+            printf("Erro! Digite um número.\n");
             
             while (getchar() != '\n');
             
@@ -58,7 +61,7 @@ int main(){
     
     preco_final = porcentagem_impostos + porcentagem_lucro + fabrica;
     
-    printf("\nO preÃ§o final do veÃ­culo serÃ¡: R$ %.2f", preco_final);
+    printf("\nO preço final do veículo será: R$ %.2f", preco_final);
 
     return 0;
 }

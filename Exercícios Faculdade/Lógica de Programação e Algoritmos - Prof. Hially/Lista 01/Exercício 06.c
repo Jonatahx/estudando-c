@@ -1,12 +1,15 @@
 #include <stdio.h>
+#include <locale.h>
 
 int main(){
+	setlocale(LC_ALL, "Portuguese");
+	
     float salario_base;
     float gratificacao;
     float imposto;
     float salario_final;
     
-    printf("Digite seu salario: \n");
+    printf("Digite seu sal·rio: \n");
     scanf("%f", &salario_base);
     
     gratificacao = salario_base * 0.05;
@@ -15,7 +18,7 @@ int main(){
     
     salario_final = salario_base + gratificacao - imposto;
     
-    printf("Seu sal√°rio final ser√°: R$ %.2f", salario_final);
+    printf("Seu sal·rio final ser·: R$ %.2f", salario_final);
     
     return 0;
 }

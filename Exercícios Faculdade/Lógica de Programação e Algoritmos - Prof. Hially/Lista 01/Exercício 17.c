@@ -1,16 +1,19 @@
 #include <stdio.h>
+#include <locale.h>
 
 int main(){
+	setlocale(LC_ALL, "Portuguese");
+	
     int valor;
     float salario, cheque[2], cpmf[2], saldo_atual;
     
-    printf("Digite seu salÃ¡rio: \n");
+    printf("Digite seu salário: \n");
     
     while (1){
         valor = scanf("%f", &salario);
         
         if (valor != 1){
-            printf("Erro! Digite um nÃºmero.\n");
+            printf("Erro! Digite um número.\n");
             
             while (getchar() != '\n');
             
@@ -28,7 +31,7 @@ int main(){
             valor = scanf("%f", &cheque[i]);
             
             if (valor != 1){
-                printf("Erro! Digite um nÃºmero. \n");
+                printf("Erro! Digite um número. \n");
             
             while(getchar() != '\n');
             
@@ -47,7 +50,7 @@ int main(){
     
     saldo_atual = salario - cheque[0] - cheque[1] - cpmf [0] - cpmf[1];
     
-    printf("\nSaldo atual Ã©: R$ %.2f", saldo_atual);
+    printf("\nSaldo atual é: R$ %.2f", saldo_atual);
 
     return 0;
 }

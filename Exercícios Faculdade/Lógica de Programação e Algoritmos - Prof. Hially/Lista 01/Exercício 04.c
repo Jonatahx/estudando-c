@@ -1,12 +1,15 @@
 #include <stdio.h>
+#include <locale.h>
 
 int main(){
-    float salario;
+	setlocale(LC_ALL, "Portuguese");
+    
+	float salario;
     float salario_porcentagem;
     float salario_final;
     float porcentagem;
     
-    printf("Digite seu sal√°rio: \n");
+    printf("Digite seu sal·rio: \n");
     scanf("%f", &salario);
     
     porcentagem = 0.25;
@@ -15,7 +18,7 @@ int main(){
     
     salario_final = salario_porcentagem + salario;
 
-    printf("Parab√©ns! Seu sal√°rio aumentou para: R$ %.2f", salario_final);
+    printf("ParabÈns! Seu sal·rio aumentou para: R$ %.2f", salario_final);
     
     return 0;
 }

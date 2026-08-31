@@ -1,16 +1,19 @@
 #include <stdio.h>
+#include <locale.h>
 #include <math.h>
 
 int main(){
+	setlocale(LC_ALL, "Portuguese");
+	
     float numero, quadrado, cubo, raiz_quadrada, raiz_cubica;
     int menu, valor;
     
     while(1){
-        printf("Digite um nÃºmero maior que zero: \n");
+        printf("Digite um número maior que zero: \n");
         valor = scanf("%f", &numero);
         
         if(valor != 1){
-            printf("Erro! Digite um NÃšMERO. \n");
+            printf("Erro! Digite um número. \n");
             
             while (getchar() != '\n');
             
@@ -18,7 +21,7 @@ int main(){
         }
         
         if (numero <= 0){
-            printf("Erro! Digite um nÃºmero maior que 0. \n");
+            printf("Erro! Digite um número maior que 0. \n");
             
             continue;
         }
@@ -36,17 +39,17 @@ int main(){
     
     
     while (1){
-        printf("Digite qual operaÃ§Ã£o deseja visualizar: \n"
+        printf("Digite qual operacão deseja visualizar: \n"
         "1. Ao quadrado\n"
         "2. Ao cubo\n"
         "3. Raiz quadrada\n"
-        "4. Raiz cÃºbica\n"
+        "4. Raiz cúbica\n"
         "5. Sair.\n");
         
         valor = scanf("%d", &menu);
         
         if (valor != 1){
-            printf("Digite apenas nÃºmeros.\n");
+            printf("Digite apenas números.\n");
             
             while (getchar() != '\n');
             
@@ -54,25 +57,25 @@ int main(){
         }
         
         if (menu < 1 || menu > 5){
-            printf("Digite uma opÃ§Ã£o vÃ¡lida: \n");
+            printf("Digite uma opção válida: \n");
             
             continue;
         }
         
         if(menu == 1){
-            printf("%.1f ao quadrado Ã©: %.1f\n", numero, quadrado);
+            printf("%.1f ao quadrado é: %.1f\n", numero, quadrado);
         }
         
         else if(menu == 2){
-            printf("%.1f ao cubo Ã©: %.1f\n", numero, cubo);
+            printf("%.1f ao cubo é: %.1f\n", numero, cubo);
         }
         
         else if(menu == 3){
-            printf("A raiz quadrada de %.1f Ã©: %.1f\n", numero, raiz_quadrada);
+            printf("A raiz quadrada de %.1f é: %.1f\n", numero, raiz_quadrada);
         }
         
         else if(menu ==4){
-            printf("A raiz cÃºbica de %.1f Ã©: %.1f\n", numero, raiz_cubica);
+            printf("A raiz cúbica de %.1f é: %.1f\n", numero, raiz_cubica);
         }
         
         else{

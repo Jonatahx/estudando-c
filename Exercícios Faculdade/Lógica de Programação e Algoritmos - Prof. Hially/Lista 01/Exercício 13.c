@@ -1,16 +1,19 @@
 #include <stdio.h>
+#include <locale.h>
 
 int main(){
+	setlocale(LC_ALL, "Portuguese");
+	
     float medida, polegadas, jardas, milhas;
     int valor;
     
-    printf("Digite uma medida em pÃ©s: \n");
+    printf("Digite uma medida em pés: \n");
     
     while (1){
         valor = scanf("%f", &medida);
         
         if (valor != 1){
-            printf("Erro! Digite um nÃºmero.\n");
+            printf("Erro! Digite um número.\n");
             
             while (getchar() != '\n');
             

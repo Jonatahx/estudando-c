@@ -1,15 +1,18 @@
 #include <stdio.h>
+#include <locale.h>
 #include <math.h>
 
 int main(){
+	setlocale(LC_ALL, "Portuguese");
+	
     float raio, area;
 
-    printf("Digite o raio do c√≠rculo: \n");
+    printf("Digite o raio do c·lculo: \n");
     scanf("%f", &raio);
     
     area = M_PI * pow(raio, 2);
 
-    printf("A √°rea do c√≠rculo √©: %f", area);
+    printf("A ·rea do c·lculo È: %f", area);
     
     return 0;
 }

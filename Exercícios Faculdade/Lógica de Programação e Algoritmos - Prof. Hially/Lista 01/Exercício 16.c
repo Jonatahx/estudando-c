@@ -1,6 +1,9 @@
 #include <stdio.h>
+#include <locale.h>
 
-int main(){    
+int main(){
+	setlocale(LC_ALL, "Portuguese");
+	
     int valor;
     float horas_trabalhadas, salario_minimo, valor_hora, salario_bruto, imposto, salario_final;
     
@@ -10,7 +13,7 @@ int main(){
         valor = scanf("%f", &horas_trabalhadas);
         
         if (valor != 1){
-            printf("Erro! Digite um n√∫mero.\n");
+            printf("Erro! Digite um n˙mero.\n");
             
             while (getchar() != '\n');
             
@@ -20,13 +23,13 @@ int main(){
         break;
     }
     
-    printf("\nDigite o sal√°rio m√≠nimo: \n");
+    printf("\nDigite o sal·rio mÌnimo: \n");
     
     while (1){
         valor = scanf("%f", &salario_minimo);
         
         if (valor != 1){
-            printf("Erro! Digite um n√∫mero.\n");
+            printf("Erro! Digite um n˙mero.\n");
             
             while (getchar() != '\n');
             
@@ -44,7 +47,7 @@ int main(){
     
     salario_final = salario_bruto - imposto;
     
-    printf("\nO sal√°rio final ser√°: R$ %.2f", salario_final);
+    printf("\nO sal·rio final ser·: R$ %.2f", salario_final);
 
     return 0;
 }
